@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Plus_Jakarta_Sans';
+    src: url('./Plus_Jakarta_Sans/PlusJakartaSans-Italic-VariableFont_wght.woff2') format('woff2'),
+        url('./Plus_Jakarta_Sans/PlusJakartaSans-Italic-VariableFont_wght.woff') format('woff');
+    font-weight: 200 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Plus_Jakarta_Sans';
+    src: url('./Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.woff2') format('woff2'),
+        url('./Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.woff') format('woff');
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+}

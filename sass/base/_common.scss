@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #936cdd;
+    --second-color: #201830;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Plus_Jakarta_Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.heading-lv1,
+.heading-lv2,
+.heading-lv3 {
+    color: var(--second-color);
+    font-weight: 700;
+}
+.heading-lv {
+    &1 {
+        font-size: 7rem;
+        line-height: 1.14286;
+    }
+
+    &2 {
+        font-size: 4.2rem;
+        line-height: 1.2381;
+    }
+
+    &3 {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+}
+
+.desc-lv1,
+.desc-lv2,
+.desc-lv3 {
+    color: var(--second-color);
+}
+.desc-lv {
+    &1 {
+        font-size: 1.8rem;
+        line-height: 1.66667;
+    }
+
+    &2 {
+        font-size: 1.6rem;
+        line-height: 1.75;
+    }
+
+    &3 {
+        font-size: 1.4rem;
+        line-height: 1.71429;
+    }
+}
+
+.btn {
+    --height: 64px;
+
+    display: inline-block;
+    min-width: 157px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 8px;
+    height: var(--height);
+    line-height: var(--height);
+    background: var(--primary-color);
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

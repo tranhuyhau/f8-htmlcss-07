@@ -1,0 +1,39 @@
+.header {
+    padding-top: 42px;
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav {
+        margin-left: auto;
+        margin-right: 144px;
+
+        &__list {
+            display: flex;
+        }
+    }
+
+    .nav__link,
+    &__btn {
+        padding: 8px 24px;
+        color: #665f73;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.75;
+    }
+
+    &__btn {
+        color: var(--second-color);
+        font-weight: 600;
+    }
+
+    .btn {
+        --height: 48px;
+
+        min-width: 116px;
+        font-size: 1.6rem;
+        background: var(--second-color);
+    }
+}
