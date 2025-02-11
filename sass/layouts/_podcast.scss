@@ -1,0 +1,88 @@
+.podcast {
+    margin-top: 205px;
+
+    .row {
+        align-items: center;
+    }
+
+    &__heading {
+        position: relative;
+
+        &::after {
+            content: url(../../assets/icon/podcast-decor-01.svg);
+            position: absolute;
+            right: 56px;
+            bottom: -19px;
+            z-index: -1;
+        }
+    }
+
+    &__desc {
+        margin-top: 18px;
+    }
+
+    .btn {
+        margin-top: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 8px;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            color: var(--primary-color);
+            background: #fff;
+        }
+    }
+
+    &__logos {
+        position: relative;
+    }
+
+    &__logo {
+        position: absolute;
+
+        &:nth-child(1) {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        &:nth-child(2) {
+            top: -56px;
+            left: 50%;
+            transform: translateX(-68%);
+        }
+
+        &:nth-child(3) {
+            top: 3px;
+            right: 0;
+        }
+
+        &:nth-child(4) {
+            left: 50%;
+            bottom: -56px;
+            transform: translateX(-92%);
+        }
+
+        &:nth-child(5) {
+            right: 48px;
+            bottom: -16px;
+        }
+    }
+
+    &__circle {
+        margin: 0 auto;
+        width: 287px;
+        height: 287px;
+        border-radius: 50%;
+        opacity: 0.4;
+        background: #ff9051;
+        filter: blur(129px);
+    }
+}

@@ -1,10 +1,13 @@
+@use '../abstracts/variables';
+
 * {
     box-sizing: border-box;
 }
 
 :root {
-    --primary-color: #936cdd;
-    --second-color: #201830;
+    --primary-color: #{variables.$primary-color};
+    --second-color: #{variables.$second-color};
+    --third-color: #{variables.$third-color};
 }
 
 html {
@@ -34,6 +37,10 @@ button {
     outline: none;
 }
 
+img {
+    display: block;
+}
+
 .heading-lv1,
 .heading-lv2,
 .heading-lv3 {
@@ -60,7 +67,7 @@ button {
 .desc-lv1,
 .desc-lv2,
 .desc-lv3 {
-    color: var(--second-color);
+    color: var(--third-color);
 }
 .desc-lv {
     &1 {
