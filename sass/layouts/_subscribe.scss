@@ -1,0 +1,72 @@
+.subscribe {
+    margin-top: 160px;
+
+    &__inner {
+        position: relative;
+        padding: 100px 0;
+        border-radius: 12px;
+        background: var(--second-color);
+    }
+
+    &__heading {
+        position: relative;
+        color: #fff;
+        z-index: 1;
+
+        &::after {
+            content: url(../../assets/icon/subscribe-decor-01.svg);
+            position: absolute;
+            bottom: -15px;
+            left: -5px;
+            z-index: -1;
+        }
+    }
+
+    &__desc {
+        color: #aba6b5;
+    }
+
+    &__form {
+        margin-top: 70px;
+    }
+
+    &__input {
+        padding: 18px 28px;
+        width: 100%;
+        border-radius: 8px;
+        background: #2b213f;
+        color: #aba6b5;
+        font-size: 1.6rem;
+        line-height: 1.75;
+
+        &::placeholder {
+            color: #aba6b5;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+    }
+
+    &__decor {
+        position: absolute;
+
+        &:nth-of-type(1) {
+            color: #5bc18f;
+            left: 45%;
+            top: 26px;
+        }
+
+        &:nth-of-type(2) {
+            color: #ff9051;
+            right: 27px;
+            top: 180px;
+        }
+
+        &:nth-of-type(3) {
+            color: #936cdd;
+            left: 35px;
+            bottom: 45px;
+        }
+    }
+}

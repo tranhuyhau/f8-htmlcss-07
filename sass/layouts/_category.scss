@@ -1,0 +1,112 @@
+.category {
+    margin-top: 206px;
+
+    &__top {
+        text-align: center;
+    }
+
+    &__heading {
+        position: relative;
+
+        &::after {
+            content: url(../../assets/icon/category-decor-01.svg);
+            position: absolute;
+            left: 49.5%;
+            bottom: -20px;
+            z-index: -1;
+        }
+    }
+
+    &__desc {
+        margin: 18px auto 0;
+        max-width: 470px;
+    }
+
+    &__list {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: 1fr 0.75fr 0.5fr 0.75fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+    }
+
+    &__card {
+        position: relative;
+        width: 100%;
+        height: 285px;
+        border-radius: 8px;
+        background: #729486;
+        overflow: hidden;
+
+        &:nth-child(1) {
+            grid-row: 1 / -1;
+            height: 100%;
+        }
+        &:nth-child(2) {
+            grid-column: 2 / 4;
+            background: #7172a0;
+        }
+        &:nth-child(3) {
+            background: #008ece;
+        }
+        &:nth-child(4) {
+            background: #f9bcc3;
+        }
+        &:nth-child(5) {
+            grid-column: 3 / -1;
+            background: #f3b610;
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-info {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        &-name {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 8px;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.66667;
+
+            &::after {
+                content: '';
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 1px solid #fff;
+                background-image: url(../../assets/icon/arrow-right-mini.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        &-desc {
+            color: #fff;
+            font-size: 1.4rem;
+            line-height: 1.71429;
+        }
+    }
+
+    &__more {
+        margin-top: 55px;
+        text-align: center;
+
+        .btn {
+            background: var(--second-color);
+        }
+    }
+}

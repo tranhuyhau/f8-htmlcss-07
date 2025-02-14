@@ -32,7 +32,8 @@ select {
     font-size: inherit;
 }
 
-button {
+button,
+input {
     border: none;
     outline: none;
 }
@@ -102,5 +103,45 @@ img {
 
     &:hover {
         opacity: 0.9;
+    }
+}
+
+.circle {
+    width: 287px;
+    height: 287px;
+    border-radius: 50%;
+    opacity: 0.4;
+    background: #ff9051;
+    filter: blur(129px);
+}
+
+.button {
+    &__dots {
+        margin-top: 55px;
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+    }
+
+    &__dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #d8d5de;
+        transition: background, width, height;
+        transition-duration: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--primary-color);
+        }
+    }
+
+    &__active {
+        width: 12px;
+        height: 12px;
+        background: var(--primary-color);
+        cursor: default;
     }
 }
