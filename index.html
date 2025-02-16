@@ -23,6 +23,14 @@
         <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
 
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <!-- Font -->
         <link rel="stylesheet" href="./assets/font/stylesheet.css" />
 
@@ -35,7 +43,7 @@
                 <div class="header__row">
                     <img src="./assets/img/logo.svg" alt="" />
 
-                    <nav class="nav">
+                    <nav id="nav-pc" class="nav show-on-pc">
                         <ul class="nav__list">
                             <li class="nav__item">
                                 <a href="#!" class="nav__link">Episodes</a>
@@ -86,23 +94,34 @@
                         </ul>
                     </nav>
 
-                    <div class="header__action">
+                    <div id="action-pc" class="header__action show-on-pc">
                         <a href="#!" class="header__btn">Log in</a>
                         <a href="#!" class="btn">Sign up</a>
                     </div>
+                    <label for="checkSidebar"><img src="./assets/icon/menu.svg" alt="" class="hidden-on-pc" /></label>
                 </div>
             </div>
         </header>
+        <div class="sidebar hidden-on-pc">
+            <input type="checkbox" name="checkSidebar" id="checkSidebar" class="checkSidebar" hidden />
+            <label for="checkSidebar" class="background-full"></label>
+            <div class="drawer">
+                <label for="checkSidebar" class="close"><i class="fa-solid fa-xmark"></i></label>
+                <nav class="nav" id="nav-mobile"></nav>
+                <div class="action" id="action-mobile"></div>
+            </div>
+        </div>
 
         <section class="hero">
             <div class="container">
-                <div class="row">
-                    <div class="col-3">
+                <div class="row gy-sm-4 gx-sm-3 gx-2 gy-3">
+                    <div class="col-lg-3 col-sm-6 col-6">
                         <figure class="hero__img-wrap">
                             <img src="./assets/img/hero-01.png" alt="" class="hero__img" />
                             <div class="hero__audio">
                                 <span class="hero__audio-play">
                                     <svg
+                                        class="show-on-pc"
                                         width="6"
                                         height="8"
                                         viewBox="0 0 6 8"
@@ -114,8 +133,21 @@
                                             fill="currentColor"
                                         />
                                     </svg>
+                                    <svg
+                                        class="hidden-on-pc"
+                                        width="5"
+                                        height="5"
+                                        viewBox="0 0 5 5"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M4.00079 2.12133C4.04034 2.14417 4.04034 2.20126 4.00079 2.22409L0.619049 4.17654C0.579497 4.19938 0.530056 4.17083 0.530056 4.12516L0.530056 0.220263C0.530056 0.174591 0.579497 0.146047 0.619049 0.168883L4.00079 2.12133Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
                                 </span>
-                                <div class="hero__audio-wave">
+                                <div class="hero__audio-wave show-on-pc">
                                     <span class="hero__audio-item">
                                         <svg
                                             width="2"
@@ -279,6 +311,278 @@
                                             xmlns="http://www.w3.org/2000/svg"
                                         >
                                             <rect width="2" height="6" rx="1" fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="hero__audio-wave hidden-on-pc">
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="4"
+                                            viewBox="0 0 2 4"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.549011"
+                                                y="0.393066"
+                                                width="1.18658"
+                                                height="3.55973"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="10"
+                                            viewBox="0 0 2 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.294983"
+                                                y="0.42627"
+                                                width="1.18658"
+                                                height="9.4926"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="16"
+                                            viewBox="0 0 2 16"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.0413818"
+                                                y="0.460205"
+                                                width="1.18658"
+                                                height="15.4255"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="10"
+                                            viewBox="0 0 2 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.294983"
+                                                y="0.42627"
+                                                width="1.18658"
+                                                height="9.4926"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="4"
+                                            viewBox="0 0 2 4"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.549011"
+                                                y="0.393066"
+                                                width="1.18658"
+                                                height="3.55973"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="4"
+                                            viewBox="0 0 2 4"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.549011"
+                                                y="0.393066"
+                                                width="1.18658"
+                                                height="3.55973"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="10"
+                                            viewBox="0 0 2 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.294983"
+                                                y="0.42627"
+                                                width="1.18658"
+                                                height="9.4926"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="16"
+                                            viewBox="0 0 2 16"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.0413818"
+                                                y="0.460205"
+                                                width="1.18658"
+                                                height="15.4255"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="10"
+                                            viewBox="0 0 2 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.294983"
+                                                y="0.42627"
+                                                width="1.18658"
+                                                height="9.4926"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="4"
+                                            viewBox="0 0 2 4"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.549011"
+                                                y="0.393066"
+                                                width="1.18658"
+                                                height="3.55973"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="4"
+                                            viewBox="0 0 2 4"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.549011"
+                                                y="0.393066"
+                                                width="1.18658"
+                                                height="3.55973"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="10"
+                                            viewBox="0 0 2 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.294983"
+                                                y="0.42627"
+                                                width="1.18658"
+                                                height="9.4926"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="16"
+                                            viewBox="0 0 2 16"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.0413818"
+                                                y="0.460205"
+                                                width="1.18658"
+                                                height="15.4255"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="10"
+                                            viewBox="0 0 2 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.294983"
+                                                y="0.42627"
+                                                width="1.18658"
+                                                height="9.4926"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="hero__audio-item">
+                                        <svg
+                                            width="2"
+                                            height="4"
+                                            viewBox="0 0 2 4"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="0.549011"
+                                                y="0.393066"
+                                                width="1.18658"
+                                                height="3.55973"
+                                                rx="0.593288"
+                                                fill="currentColor"
+                                            />
                                         </svg>
                                     </span>
                                 </div>
@@ -302,12 +606,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-6 col-6">
                         <div class="hero__podcast">
                             <b>500+</b>
                             <span>Podcasts</span>
-                            <img src="./assets/icon/hero-decor.svg" alt="" class="hero__podcast-decor" />
-                            <img src="./assets/icon/hero-decor.svg" alt="" class="hero__podcast-decor" />
+                            <img src="./assets/icon/hero-decor-01.svg" alt="" class="hero__podcast-decor" />
+                            <img src="./assets/icon/hero-decor-01.svg" alt="" class="hero__podcast-decor" />
                         </div>
                         <div class="hero__podcasts-app">
                             <img src="./assets/icon/spotify.png" alt="" />
@@ -322,7 +626,7 @@
                             </div>
                         </figure>
                     </div>
-                    <div class="col-5 offset-1">
+                    <div class="col-lg-5 offset-lg-1 col-sm-12 offset-sm-0 col-12">
                         <h1 class="heading-lv1 hero__heading">A new era of podcasting for you</h1>
                         <p class="desc-lv1 hero__desc">
                             Rebuilt for simplicity and speed, so you can spend more time discovering and listening to
@@ -345,8 +649,8 @@
         <main>
             <section class="podcast">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-5">
+                    <div class="row gy-sm-5">
+                        <div class="col-lg-5 col-sm-12 col-12">
                             <h2 class="heading-lv2 podcast__heading">We are in the top podcast directories</h2>
                             <p class="desc-lv2 podcast__desc">
                                 Rebuilt for simplicity and speed, so you can spend more time discovering and listening
@@ -370,7 +674,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="col-6 offset-1">
+                        <div class="col-lg-6 offset-lg-1 col-sm-12 offset-sm-0 col-12">
                             <div class="podcast__logos">
                                 <img src="./assets/icon/pocket-casts.png" alt="" class="podcast__logo" />
                                 <img src="./assets/icon/apple-podcast.png" alt="" class="podcast__logo" />
@@ -450,13 +754,13 @@
                 <div class="container">
                     <div class="episode__top">
                         <h2 class="heading-lv2 episode__heading">Our most popular episodes</h2>
-                        <a href="#!" class="btn episode__btn">All episodes</a>
+                        <a href="#!" id="episode__btn--pc" class="btn episode__btn hidden-on-mobile">All episodes</a>
                     </div>
 
                     <div class="episode__content">
-                        <div class="row row-cols-2 gy-3">
+                        <div class="row row-cols-lg-2 gy-lg-3 row-cols-sm-2 gy-sm-3 row-cols-1">
                             <div class="col">
-                                <article class="row align-center row-cols-2">
+                                <article class="row align-center row-cols-lg-2 row-cols-sm-2 row-cols-2 gx-2">
                                     <div class="col">
                                         <a href="#!">
                                             <img
@@ -489,7 +793,7 @@
                                 </article>
                             </div>
                             <div class="col">
-                                <article class="row align-center row-cols-2">
+                                <article class="row align-center row-cols-lg-2 row-cols-sm-2 row-cols-2 gx-2">
                                     <div class="col">
                                         <a href="#!">
                                             <img
@@ -522,7 +826,7 @@
                                 </article>
                             </div>
                             <div class="col">
-                                <article class="row align-center row-cols-2">
+                                <article class="row align-center row-cols-lg-2 row-cols-sm-2 row-cols-2 gx-2">
                                     <div class="col">
                                         <div class="episode__content-info">
                                             <time class="episode__content-time">Episode3 - 1hr 25min</time>
@@ -555,7 +859,7 @@
                                 </article>
                             </div>
                             <div class="col">
-                                <article class="row align-center row-cols-2">
+                                <article class="row align-center row-cols-lg-2 row-cols-sm-2 row-cols-2 gx-2">
                                     <div class="col">
                                         <div class="episode__content-info">
                                             <time class="episode__content-time">Episode3 - 1hr 25min</time>
@@ -595,24 +899,43 @@
                         <span class="button__dot"></span>
                         <span class="button__dot"></span>
                     </div>
+                    <a href="#!" id="episode__btn--mobile" class="btn episode__btn show-on-mobile"></a>
                 </div>
             </section>
 
             <section class="say">
                 <div class="container">
                     <div class="say__inner">
-                        <div class="row align-center">
-                            <div class="col-3">
+                        <div class="row align-center gy-sm-0 gy-3">
+                            <div class="hidden-on-mobile col-sm-3">
                                 <figure class="say__img-wrap say__img-wrap--left">
                                     <img src="./assets/img/say-01.png" alt="" class="say__img say__img--left" />
                                 </figure>
                             </div>
-                            <div class="col-4 offset-negative-1">
+                            <div class="hidden-on-mobile col-lg-4 offset-negative-lg-1 col-sm-4 offset-negative-sm-1">
                                 <figure class="say__img-wrap say__img-wrap--right">
                                     <img src="./assets/img/say-02.png" alt="" class="say__img say__img--right" />
                                 </figure>
                             </div>
-                            <div class="col-5 offset-1">
+                            <div class="show-on-mobile col-12">
+                                <div class="row align-center g-0">
+                                    <div class="col-6">
+                                        <figure class="say__img-wrap say__img-wrap--left">
+                                            <img src="./assets/img/say-01.png" alt="" class="say__img say__img--left" />
+                                        </figure>
+                                    </div>
+                                    <div class="col-7 offset-negative-1">
+                                        <figure class="say__img-wrap say__img-wrap--right">
+                                            <img
+                                                src="./assets/img/say-02.png"
+                                                alt=""
+                                                class="say__img say__img--right"
+                                            />
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 offset-lg-1 col-sm-5 offset-sm-1 col-12 offset-0">
                                 <div class="say__content">
                                     <img src="./assets/icon/quote.svg" alt="" />
                                     <h2 class="heading-lv2 say__heading">What our listeners saying about us</h2>
@@ -639,10 +962,10 @@
                 <div class="container">
                     <div class="subscribe__inner">
                         <div class="row align-center">
-                            <div class="col-5 offset-1">
+                            <div class="col-lg-5 offset-lg-1 col-sm-5 offset-sm-1">
                                 <h2 class="heading-lv2 subscribe__heading">Subscribe and get update regularly</h2>
                             </div>
-                            <div class="col-5">
+                            <div class="col-lg-5 col-sm-5">
                                 <p class="desc-lv2 subscribe__desc">
                                     Rebuilt for simplicity and speed, so you can spend more time discovering and
                                     listening to great podcasts. Get all the updates of latest podcasts.
@@ -650,11 +973,11 @@
                             </div>
                         </div>
                         <form action="" class="subscribe__form">
-                            <div class="row">
-                                <div class="col-4 offset-1">
+                            <div class="row gy-sm-2 gy-2">
+                                <div class="col-lg-4 offset-lg-1 col-sm-10 offset-sm-1 col-12">
                                     <input type="text" name="" id="" class="subscribe__input" placeholder="Your name" />
                                 </div>
-                                <div class="col-4">
+                                <div class="col-lg-4 offset-lg-0 col-sm-10 offset-sm-1 col-12">
                                     <input
                                         type="email"
                                         name=""
@@ -663,7 +986,7 @@
                                         placeholder="Your email adress"
                                     />
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-2 offset-lg-0 col-sm-10 offset-sm-1 col-12">
                                     <button type="button" class="btn subscribe__button">Subscribe</button>
                                 </div>
                             </div>
@@ -770,19 +1093,19 @@
                         <h3 class="heading-lv3 footer__column-heading">Linkes</h3>
                         <ul class="footer__column-list">
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Home</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Home</a>
                             </li>
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Episodes</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Episodes</a>
                             </li>
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Trending</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Trending</a>
                             </li>
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Category</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Category</a>
                             </li>
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Blog</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -790,16 +1113,16 @@
                         <h3 class="heading-lv3 footer__column-heading">Features</h3>
                         <ul class="footer__column-list">
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Style guide</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Style guide</a>
                             </li>
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Instructions</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Instructions</a>
                             </li>
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Catelog</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Catelog</a>
                             </li>
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Your podcast</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Your podcast</a>
                             </li>
                         </ul>
                     </div>
@@ -807,16 +1130,16 @@
                         <h3 class="heading-lv3 footer__column-heading">Company</h3>
                         <ul class="footer__column-list">
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Privacy</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Privacy</a>
                             </li>
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Terms</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Terms</a>
                             </li>
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Security</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Security</a>
                             </li>
                             <li class="footer__column-item">
-                                <a href="#!" class="footer__column-link">Cookies</a>
+                                <a href="#!" class="desc-lv2 footer__column-link">Cookies</a>
                             </li>
                         </ul>
                     </div>
@@ -843,5 +1166,18 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            const navPc = document.querySelector('#nav-pc');
+            const navMobile = document.querySelector('#nav-mobile');
+            const actionPc = document.querySelector('#action-pc');
+            const actionMobile = document.querySelector('#action-mobile');
+            const episode__btnPc = document.querySelector('#episode__btn--pc');
+            const episode__btnMobile = document.querySelector('#episode__btn--mobile');
+
+            navMobile.innerHTML = navPc.innerHTML;
+            actionMobile.innerHTML = actionPc.innerHTML;
+            episode__btnMobile.innerHTML = episode__btnPc.innerHTML;
+        </script>
     </body>
 </html>

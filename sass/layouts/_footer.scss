@@ -3,9 +3,10 @@
     background: #fff8f3;
 
     &__inner {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        column-gap: 90px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px 90px;
     }
 
     .copyright {
@@ -14,8 +15,12 @@
 
     &__column {
         &:first-child {
-            min-width: 270px;
+            width: 270px;
             margin-right: 26px;
+        }
+
+        &-heading {
+            font-size: 2rem;
         }
 
         &-item {
